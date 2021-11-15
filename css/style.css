@@ -1,4 +1,8 @@
-a {
-  display: block;
+nav.w3-bar a.w3-bar-item {
   width: 25%;
+}
+
+.w3-button:hover {
+  color: #000 !important;
+  background-color: #f5f5f5 !important;
 }
