@@ -1,26 +1,46 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: #2B0E10;
     width: 100%;
 }
 
-.name{
-    width: 100%;
-    margin: 22% auto;
+.center-element,
+.loader {
+    display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.title{
+.title {
     font-size: 7vw;
     text-shadow: 17px 15px 15px #00000063;
 }
 
-.intro{
+.intro {
     color: #CCC2C3;
     font-family: filson pro;
     margin-bottom: 5%;
+}
+
+.hexagon {
+    width: 150px;
+    height: 150px;
+}
+
+.hex-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 15s linear forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
