@@ -20,12 +20,17 @@ body {
 .title {
     font-size: 7vw;
     text-shadow: 17px 15px 15px #00000063;
+    cursor: pointer;
 }
 
 .intro {
     color: #CCC2C3;
     font-family: filson pro;
     margin-bottom: 5%;
+}
+
+.hex-element{
+    display: none;
 }
 
 .hexagon {
@@ -49,6 +54,14 @@ body {
     stroke-dasharray: 3000;
     stroke-dashoffset: 3000;
     animation: dash 2s linear forwards;
+}
+
+.visible{
+    display: block;
+}
+
+.invisible{
+    display: none;
 }
 
 @keyframes dash {
