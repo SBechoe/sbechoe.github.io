@@ -29,18 +29,39 @@ body {
 }
 
 .hexagon {
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
+}
+
+.hex-style {
+    stroke: #CCC2C3;
+    fill: none;
+    stroke-width: 20;
+}
+
+.hex-letter {
+    fill: #CCC2C3;
+    stroke-width: 15;
+    animation: SB 5s;
 }
 
 .hex-path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 15s linear forwards;
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    animation: dash 2s linear forwards;
 }
 
 @keyframes dash {
     to {
         stroke-dashoffset: 0;
+    }
+}
+
+@keyframes SB {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
     }
 }
