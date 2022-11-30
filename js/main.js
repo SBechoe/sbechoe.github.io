@@ -11,7 +11,7 @@ nameTitle.addEventListener('click', startLoader);
 burger.addEventListener('click', toggleNav);
 
 function startLoader(){
-    const loadWebsite = setTimeout(startWebsite, 5000);
+    const loadWebsite = setTimeout(startWebsite, 3000);
     nameTitle.classList.add('invisible');
     loader.classList.add('visible');
 }
