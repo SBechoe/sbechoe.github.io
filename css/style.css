@@ -111,7 +111,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(100px, auto);
         grid-template-areas:
-            "hd hd ";
+            "hd hd";
     }
 
     .header {
@@ -125,13 +125,22 @@ body {
     .nav-mobile {
         overflow: hidden;
         position: relative;
-        height: 500px;
+        height: 338px;
+    }
+
+    .nav-list{
+        padding: 1rem;    
+        box-shadow: 0px 6px 10px 0px #0000004f;
     }
 
     .nav-item {
         display: block;
         font-size: 6vw;
-        margin-top: 10vw;
+        margin-bottom: 10vw;     
+    }
+
+    .nav-item:last-child{
+        margin-bottom: 0vw;
     }
 
     .icon {
@@ -141,6 +150,10 @@ body {
         position: absolute;
         right: 0;
         top: 0;
+    }
+
+    .icon:focus{
+        color:#2B0E10
     }
 
     .header .logo {

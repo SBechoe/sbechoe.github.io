@@ -31,5 +31,4 @@ function toggleNav(){
         nav.classList.add('invisible');
         navState = "closed";
     }
-
 }
