@@ -10,58 +10,6 @@ body {
     font-family: filson pro;
 }
 
-.center-element,
-.loader {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.title {
-    font-size: 10vw;
-    text-shadow: 17px 15px 15px #00000063;
-    cursor: pointer;
-    animation: pulse-white 2s infinite;
-}
-
-.title:hover {
-    color: white;
-}
-
-.intro {
-    color: #CCC2C3;
-    margin-bottom: 5%;
-}
-
-.hex-element {
-    display: none;
-}
-
-.hexagon {
-    width: 175px;
-    height: 175px;
-}
-
-.hex-style {
-    stroke: #CCC2C3;
-    fill: none;
-    stroke-width: 20;
-}
-
-.hex-letter {
-    fill: #CCC2C3;
-    stroke-width: 15;
-    animation: SB 5s;
-}
-
-.hex-path {
-    stroke-dasharray: 3000;
-    stroke-dashoffset: 3000;
-    animation: dash 2s linear forwards;
-}
-
 .visible {
     display: block;
 }
@@ -75,10 +23,12 @@ body {
     .wrapper {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-auto-rows: minmax(100px, auto);
+        grid-auto-rows: minmax(50px, auto);
         grid-template-areas:
-            "hd hd hd hd hd hd hd  hd hd hd hd hd "
-            ". .  txt txt txt txt photo photo photo photo . .";
+            "hd hd hd hd hd hd hd hd hd hd hd hd"
+            ". . . . . . . . . . . ."
+            ". . welcome welcome . . . . . . . ."
+            ". . name name name . . . . . . .";
     }
 
     .nav-mobile {
@@ -105,9 +55,6 @@ body {
     }
 }
 
-.header {
-    grid-area: hd;
-}
 
 .nav-item {
     list-style: none;
@@ -134,8 +81,18 @@ body {
     border-radius: 15px;
 }
 
-.Introduction{
-    grid-area: intro;
+/* grid-areas */
+
+.header {
+    grid-area: hd;
+}
+
+.welcome{
+    grid-area: welcome;
+}
+
+.name{
+    grid-area: name;
 }
 
 .text {
@@ -145,6 +102,8 @@ body {
 .photo {
     grid-area: photo;
 }
+
+/* keyframes */
 
 @keyframes pulse-white {
     0% {
