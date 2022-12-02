@@ -9,6 +9,18 @@
     }
 
     .header {
+        grid-area: hd;
+    }
+
+    .welcome {
+        grid-area: welcome;
+    }
+
+    .about-me {
+        grid-area: about;
+    }
+
+    .header {
         padding: 1rem;
     }
 
@@ -19,21 +31,20 @@
     .nav-mobile {
         overflow: hidden;
         position: relative;
-        height: 338px;
     }
 
-    .nav-list{
-        padding: 1rem;    
+    .nav-list {
+        padding: 1rem;
         box-shadow: 0px 6px 10px 0px #0000004f;
     }
 
     .nav-item {
         display: block;
         font-size: 6vw;
-        margin-bottom: 10vw;     
+        margin-bottom: 10vw;
     }
 
-    .nav-item:last-child{
+    .nav-item:last-child {
         margin-bottom: 0vw;
     }
 
@@ -46,30 +57,29 @@
         top: 0;
     }
 
-    .icon:focus{
-        color:#2B0E10
+    .icon:focus {
+        color: #2B0E10;
     }
 
     .header .logo {
         width: 50px;
     }
 
+    /* welcome */
     .welcome {
         padding: 1rem;
     }
-    .welcome p{
+
+    .welcome p {
         width: 100%;
     }
-}
 
-.header {
-    grid-area: hd;
-}
-
-.welcome {
-    grid-area: welcome;
-}
-
-.about-me {
-    grid-area: about;
+    .welcome h2 {
+        font-size: 11vw;
+        margin: 20px 0px;
+    }
+    
+    .welcome h3 {
+        font-size: 6vw;
+    }
 }
