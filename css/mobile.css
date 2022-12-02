@@ -1,27 +1,40 @@
 @media screen and (max-width: 440px) {
     .wrapper {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: minmax(100px, auto);
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(70px, auto);
         grid-template-areas:
-            "hd hd"
-            "welcome welcome";
+            "hd"
+            "welcome"
+            ". "
+            "title"
+            "abtxt"
+            "abimg";
     }
 
     .header {
         grid-area: hd;
+        position: sticky;        
+        background-color: #2b0e10;
+        width: 100%;
+        right: 0;
+        top: 0;
     }
 
     .welcome {
         grid-area: welcome;
     }
 
-    .about-me {
-        grid-area: about;
+    .about-title {
+        grid-area: title;
     }
 
-    .header {
-        padding: 1rem;
+    .ab-txt {
+        grid-area: abtxt;
+    }
+
+    .ab-img {
+        grid-area: abimg;
     }
 
     .nav-browser {
@@ -30,12 +43,14 @@
 
     .nav-mobile {
         overflow: hidden;
-        position: relative;
     }
 
     .nav-list {
+        position: fixed;
         padding: 1rem;
-        box-shadow: 0px 6px 10px 0px #0000004f;
+        box-shadow: 0px 6px 10px 0px #000000a1;
+        background-color: #2b0e10;
+        width: 100%;
     }
 
     .nav-item {
@@ -52,7 +67,7 @@
         font-size: 40px;
         color: white;
         display: block;
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
     }
@@ -66,8 +81,12 @@
     }
 
     /* welcome */
-    .welcome {
-        padding: 1rem;
+    .welcome,
+    .about-title,
+    .ab-img,
+    .ab-txt {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .welcome p {
@@ -78,8 +97,22 @@
         font-size: 11vw;
         margin: 20px 0px;
     }
-    
+
     .welcome h3 {
         font-size: 6vw;
+    }
+
+    /* about */
+    .about-title {
+        margin-top: 0px;
+    }
+
+    .ab-img {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .ab-img img {
+        width: 100%;
     }
 }
