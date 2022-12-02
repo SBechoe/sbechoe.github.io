@@ -4,7 +4,8 @@
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(100px, auto);
         grid-template-areas:
-            "hd hd";
+            "hd hd"
+            "welcome welcome";
     }
 
     .header {
@@ -52,4 +53,23 @@
     .header .logo {
         width: 50px;
     }
+
+    .welcome {
+        padding: 1rem;
+    }
+    .welcome p{
+        width: 100%;
+    }
+}
+
+.header {
+    grid-area: hd;
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+.about-me {
+    grid-area: about;
 }

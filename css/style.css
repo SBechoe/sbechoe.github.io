@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #2B0E10;
     width: 100%;
@@ -27,7 +31,8 @@ body {
         grid-template-areas:
             "hd hd hd hd hd hd hd hd hd hd hd hd"
             ". . . . . . . . . . . ."
-            ". . welcome welcome welcome welcome welcome  welcome . . . .";
+            ". . welcome welcome welcome welcome welcome  welcome . . . ."
+            ". . about about about about . . . . . .";
     }
 
     .nav-mobile {
@@ -41,14 +46,14 @@ body {
     .header .logo {
         width: 60px;
     }
-    
+
     .nav-list {
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
 
-    .nav-item{
+    .nav-item {
         font-size: 1vw;
         margin-right: 5rem;
     }
@@ -81,23 +86,23 @@ body {
 }
 
 /* wlcome */
-.welcome h4{
+.welcome h4 {
     color: white;
     font-size: 1.17em;
 }
 
-.welcome h2{
+.welcome h2 {
     color: #C9C2C3;
     font-size: 5vw;
     margin: 20px 0px;
 }
 
-.welcome h3{
-    color:#948687;
+.welcome h3 {
+    color: #948687;
     font-size: 3vw;
 }
 
-.welcome p{
+.welcome p {
     color: #948687;
     width: 707px;
     font-size: 20px;
@@ -105,11 +110,11 @@ body {
     margin: 20px 0px;
 }
 
-.welcome em{
+.welcome em {
     color: white;
 }
 
-.student-work{
+.student-work {
     border: 1px solid #CCC2C3;
     color: #CCC2C3;
     background-color: #E5E1E118;
@@ -120,26 +125,28 @@ body {
     letter-spacing: 2px;
 }
 
+/* about */
+.about-me {
+    margin-top: 250px;
+}
+
+.about-me h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
 /* grid-areas */
 
 .header {
     grid-area: hd;
 }
 
-.welcome{
+.welcome {
     grid-area: welcome;
 }
 
-.name{
-    grid-area: name;
-}
-
-.text {
-    grid-area: txt;
-}
-
-.photo {
-    grid-area: photo;
+.about-me {
+    grid-area: about;
 }
 
 /* keyframes */
