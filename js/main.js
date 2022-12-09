@@ -5,6 +5,7 @@ const wrapper = document.querySelector('.start-website');
 const nav = document.querySelector('.mobile');
 const navItems= document.querySelectorAll('.nav-item');
 const burger = document.querySelector('.icon');
+const body = document.querySelector('body');
 
 let navState = "closed";
 
@@ -26,6 +27,7 @@ function startLoader(){
 function startWebsite(){
     centerElement.remove();
     wrapper.classList.add('wrapper');
+    body.classList.add('border');
 }
 
 function toggleNav(){

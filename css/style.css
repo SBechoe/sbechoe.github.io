@@ -14,6 +14,11 @@ body {
     width: 100%;
 }
 
+.border{
+    border: 7px solid;
+    border-image: linear-gradient(180deg, rgba(148,134,135,1) 0%, rgba(95,73,75,1) 35%, rgba(69,44,46,1) 100%)1;
+}
+
 .visible {
     display: block;
 }
@@ -69,11 +74,10 @@ body {
     .ab-img::after {
         content: "";
         display: block;
-        position: absolute;
+        position: relative;
         width: 20vw;
         height: 20vw;
-        top: 58vw;
-        left: 54vw;
+        top: -20vw;
         z-index: -1;
         border: 4px solid #5F494B;
         box-shadow: 0px 3px 6px;
