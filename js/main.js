@@ -4,6 +4,7 @@ const loader = document.querySelector('.hex-element');
 const wrapper = document.querySelector('.start-website');
 const nav = document.querySelector('.mobile');
 const navItems= document.querySelectorAll('.nav-item');
+const mobileNav = document.querySelector('.nav-mobile');
 const burger = document.querySelector('.icon');
 const body = document.querySelector('body');
 
@@ -15,6 +16,7 @@ burger.addEventListener('click', toggleNav);
 for (const navItem of navItems) {
     navItem.addEventListener('click', function(event) {
         nav.classList.add('invisible');
+        mobileNav.classList.remove('bg-color');
     })
   }
 
@@ -33,9 +35,11 @@ function startWebsite(){
 function toggleNav(){
     if(navState == "closed"){
         nav.classList.remove('invisible');
+        mobileNav.classList.add('bg-color');
         navState = "open";
     }
     else if(navState == "open"){
+        mobileNav.classList.remove('bg-color');
         nav.classList.remove('visible');
         nav.classList.add('invisible');
         navState = "closed";
