@@ -5,6 +5,10 @@
     font-family: filson pro;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -14,9 +18,9 @@ body {
     width: 100%;
 }
 
-.border{
+.border {
     border: 7px solid;
-    border-image: linear-gradient(180deg, rgba(148,134,135,1) 0%, rgba(95,73,75,1) 35%, rgba(69,44,46,1) 100%)1;
+    border-image: linear-gradient(180deg, rgba(148, 134, 135, 1) 0%, rgba(95, 73, 75, 1) 35%, rgba(69, 44, 46, 1) 100%)1;
 }
 
 .visible {
