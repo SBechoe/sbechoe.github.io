@@ -35,7 +35,7 @@ body {
         grid-template-areas:
             "hd hd hd hd hd hd hd hd hd hd hd hd"
             ". . . . . . . . . . . ."
-            ". . welcome welcome welcome welcome welcome  welcome . . . ."
+            ". . welcome welcome welcome welcome welcome welcome . . . ."
             ". . . . . . . . . . . ."
             ". . title title title title . . . . . ."
             ". . abtxt abtxt abtxt abtxt abimg abimg abimg abimg . .";

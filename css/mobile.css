@@ -6,7 +6,6 @@
         grid-template-areas:
             "hd"
             "welcome"
-            ". "
             "title"
             "abtxt"
             "abimg";
@@ -14,7 +13,7 @@
 
     .header {
         grid-area: hd;
-        position: sticky;        
+        position: sticky;
         background-color: #2b0e10;
         width: 100%;
         right: 0;
@@ -45,7 +44,7 @@
         overflow: hidden;
     }
 
-    .bg-color{  
+    .bg-color {
         background-color: #000000e6;
     }
 
@@ -85,7 +84,8 @@
     }
 
     .header .logo {
-        width: 50px;
+        width: 40px;
+        margin: 9px;
     }
 
     /* welcome */
@@ -112,7 +112,8 @@
 
     /* about */
     .about-title {
-        margin-top: 0px;
+        margin-top: 44px;
+        padding-top: 63px;
     }
 
     .ab-img {
@@ -124,16 +125,16 @@
         width: 100%;
     }
 
-    /* Keyframes */  
+    /* Keyframes */
     @keyframes slidein {
         from {
-          margin-top: 70%;
-          margin-bottom: 30vw;
+            margin-top: 70%;
+            margin-bottom: 30vw;
         }
-      
+
         to {
-          margin-top: 0%;
-          margin-bottom: 10vw;
+            margin-top: 0%;
+            margin-bottom: 10vw;
         }
-      }
+    }
 }
