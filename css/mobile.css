@@ -8,7 +8,10 @@
             "welcome"
             "title"
             "abtxt"
-            "abimg";
+            "abimg"
+            "."
+            "stwork"
+            "pthong";
     }
 
     .header {
@@ -34,6 +37,14 @@
 
     .ab-img {
         grid-area: abimg;
+    }
+
+    .student-section {
+        grid-area: stwork;
+    }
+
+    .pthong {
+        grid-area: pthong;
     }
 
     .nav-browser {
@@ -92,7 +103,8 @@
     .welcome,
     .about-title,
     .ab-img,
-    .ab-txt {
+    .ab-txt,
+    .student-section{
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -123,6 +135,10 @@
 
     .ab-img img {
         width: 100%;
+    }
+
+    .pthong-overlay{
+        opacity: 1;
     }
 
     /* Keyframes */
