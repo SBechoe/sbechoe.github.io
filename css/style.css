@@ -94,7 +94,7 @@ hr {
     }
 
     .ab-img img:hover {
-        box-shadow: 2px 3px 11px 2px #ffffff61
+        box-shadow: 2px 3px 11px 2px #ffffff61;
     }
 }
 
@@ -193,26 +193,31 @@ hr {
 }
 
 /* student section */
-
-.pthong img{    
+.portfolio img {
     width: 100%;
     border: 8px solid #5F494B;
 }
 
-.pthong-overlay{
+.pthong-overlay {
     z-index: 10;
     grid-column: pthong-start / pthong-end;
     grid-row: pthong-start / pthong-end;
-    background-color: #94868798;
     text-align: center;
     color: white;
+    background-color: #94868798;
     text-shadow: 0px 3px 6px #000;
     font-size: 38px;
     padding: 19%;
+    transition: opacity 0.32s linear;
+    opacity: 0;
+    text-decoration: none;
+}
+
+.pthong-overlay:hover {
+    opacity: 1;
 }
 
 /* grid-areas */
-
 .header {
     grid-area: hd;
 }
@@ -233,10 +238,10 @@ hr {
     grid-area: abimg;
 }
 
-.student-section{
+.student-section {
     grid-area: stwork;
 }
 
-.pthong{
+.pthong {
     grid-area: pthong;
 }
