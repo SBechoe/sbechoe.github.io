@@ -43,7 +43,7 @@
         grid-area: stwork;
     }
 
-    .pthong {
+    .pthong-overlay {
         grid-area: pthong;
     }
 
@@ -104,7 +104,8 @@
     .about-title,
     .ab-img,
     .ab-txt,
-    .student-section{
+    .student-section,
+    .pthong-overlay{
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -135,6 +136,12 @@
 
     .ab-img img {
         width: 100%;
+    }
+
+    /* Student work */
+
+    .pthong{
+        display: none;
     }
 
     .pthong-overlay{
