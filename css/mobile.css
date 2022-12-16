@@ -47,7 +47,7 @@
         grid-area: pthong;
     }
 
-    .nav-browser {
+    .nav-browser, .ab-overlay, .pthong{
         display: none;
     }
 
@@ -137,12 +137,7 @@
     .ab-img img {
         width: 100%;
     }
-
     /* Student work */
-
-    .pthong{
-        display: none;
-    }
 
     .pthong-overlay{
         opacity: 1;

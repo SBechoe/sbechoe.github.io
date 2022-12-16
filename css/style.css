@@ -79,7 +79,6 @@ hr {
 
     .ab-img img {
         width: 20vw;
-        transition: box-shadow 1s;
     }
 
     .ab-img::after {
@@ -94,15 +93,19 @@ hr {
         box-shadow: 0px 3px 6px;
     }
 
-    .ab-img img:hover {
-        box-shadow: 2px 3px 11px 2px #ffffff61;
-    }
-
     .pthong-overlay {
         z-index: 10;
         grid-column: pthong-start / pthong-end;
         grid-row: pthong-start / pthong-end;
         transition: opacity 0.32s linear;
+    }
+
+    .ab-overlay {
+        z-index: 10;
+        grid-column: abimg-start / abimg-end;
+        grid-row: abimg-start / abimg-end;
+        transition: opacity 0.32s linear;
+        opacity: 0;
     }
 }
 
@@ -196,8 +199,12 @@ hr {
     list-style-position: inside;
 }
 
-.ab-img {
-    margin-left: 3vw;
+.ab-overlay img{
+    width: 20vw;
+}
+
+.ab-overlay:hover {
+    opacity: 1;
 }
 
 /* student section */
