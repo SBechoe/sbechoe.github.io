@@ -118,20 +118,21 @@ hr {
     }
 
     .contact .contact-item {
-        color: #948687;
+        color: #E5E1E1;
         font-size: 20px;
         margin-bottom: 40px;
     }
 
-    .contact-item a:visited{
-        color: #948687;
+    .contact-item a:visited {
+        color: #E5E1E1;
     }
 
-    .contact-item:hover{
-        transform: translateY(-3px);
+    .contact-item:hover {
+        transform: translateY(-10px);
+        text-shadow: 0px 7px 5px #ffffff45;
     }
-    
-    .contact-item a:hover{
+
+    .contact-item a:hover {
         color: white;
     }
 
@@ -141,7 +142,7 @@ hr {
         width: 2px;
         height: 160px;
         margin: auto;
-        background-color: #948687;
+        background-color: #E5E1E1;
     }
 }
 
