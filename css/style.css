@@ -40,7 +40,7 @@ hr {
             "hd hd hd hd hd hd hd hd hd hd hd hd"
             ". . . . . . . . . . . ."
             ". . welcome welcome welcome welcome welcome welcome . . . ."
-            ". . . . . . . . . . . ."
+            "contact . . . . . . . . . . ."
             ". . about about about about . . . . . ."
             ". . abtxt abtxt abtxt abtxt . abimg abimg abimg abimg ."
             ". . . . . . . . . . . ."
@@ -107,10 +107,47 @@ hr {
         transition: opacity 0.32s linear;
         opacity: 0;
     }
+
+    .contact {
+        display: flex;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        right: 93%;
+        justify-content: end;
+    }
+
+    .contact .contact-item {
+        color: #948687;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .contact-item a:visited{
+        color: #948687;
+    }
+
+    .contact-item:hover{
+        transform: translateY(-3px);
+    }
+    
+    .contact-item a:hover{
+        color: white;
+    }
+
+    .contact ul::after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 160px;
+        margin: auto;
+        background-color: #948687;
+    }
 }
 
 /* nav */
-.nav-item {
+.nav-item,
+.contact-item {
     list-style: none;
 }
 
@@ -199,7 +236,7 @@ hr {
     list-style-position: inside;
 }
 
-.ab-overlay img{
+.ab-overlay img {
     width: 20vw;
 }
 
@@ -255,4 +292,8 @@ hr {
 
 .pthong {
     grid-area: pthong;
+}
+
+.contact {
+    grid-area: contact;
 }

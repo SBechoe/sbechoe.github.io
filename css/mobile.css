@@ -11,7 +11,8 @@
             "abimg"
             "."
             "stwork"
-            "pthong";
+            "pthong"
+            ".";
     }
 
     .header {
@@ -47,7 +48,9 @@
         grid-area: pthong;
     }
 
-    .nav-browser, .ab-overlay, .pthong{
+    .nav-browser,
+    .ab-overlay,
+    .pthong, .contact {
         display: none;
     }
 
@@ -104,10 +107,14 @@
     .about-title,
     .ab-img,
     .ab-txt,
-    .student-section,
-    .pthong-overlay{
+    .student-section {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .pthong-overlay {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     .welcome p {
@@ -137,9 +144,10 @@
     .ab-img img {
         width: 100%;
     }
+
     /* Student work */
 
-    .pthong-overlay{
+    .pthong-overlay {
         opacity: 1;
     }
 
