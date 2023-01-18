@@ -1,4 +1,4 @@
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 859px) {
     .wrapper {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -12,6 +12,8 @@
             "."
             "stwork"
             "pthong"
+            "abakdalieh"
+            "asantokhi"
             ".";
     }
 
@@ -48,9 +50,20 @@
         grid-area: pthong;
     }
 
+    .abakdalieh-overlay {
+        grid-area: abakdalieh;
+    }
+
+    .asantokhi-overlay {
+        grid-area: asantokhi;
+    }
+
     .nav-browser,
     .ab-overlay,
-    .pthong, .contact {
+    .pthong,
+    .abakdalieh,
+    .asantokhi,
+    .contact {
         display: none;
     }
 
@@ -112,9 +125,12 @@
         padding-right: 1rem;
     }
 
-    .pthong-overlay {
+    .pthong-overlay,
+    .abakdalieh-overlay,
+    .asantokhi-overlay {
         margin-left: 1rem;
         margin-right: 1rem;
+        margin-bottom: 1rem;
     }
 
     .welcome p {
@@ -147,7 +163,9 @@
 
     /* Student work */
 
-    .pthong-overlay {
+    .pthong-overlay,
+    .abakdalieh-overlay,
+    .asantokhi-overlay {
         opacity: 1;
     }
 
