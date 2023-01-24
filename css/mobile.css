@@ -100,8 +100,13 @@
         animation-name: slidein;
     }
 
-    .nav-item:last-child {
+    .theme {
         margin-bottom: 0vw;
+        display: block;
+        font-size: 6vw;
+        margin-bottom: 10vw;
+        animation-duration: 0.6s;
+        animation-name: slidein;
     }
 
     .icon {

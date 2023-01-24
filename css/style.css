@@ -1,4 +1,5 @@
 @import "cssvar.css";
+
 @font-face {
     font-family: FilsonProRegular;
     src: url(../fonts/FilsonProRegular.otf);
@@ -24,6 +25,9 @@ body {
     width: 100%;
 }
 
+.visible {
+    display: block;
+}
 
 .invisible {
     display: none;
@@ -32,7 +36,6 @@ body {
 hr {
     margin-bottom: 30px;
 }
-
 
 button {
     border: 1px solid var(--button-style);
@@ -64,7 +67,8 @@ button {
 
     .border {
         border: 7px solid;
-        border-image: linear-gradient(180deg, var(--mid-gray-text) 0%, var(--border) 35%, var(--mid-red-border) 100%)1;
+        border-image: linear-gradient(180deg, var(--mid-gray-text) 0%, var(--border) 35%,
+                var(--mid-red-border) 100%)1;
     }
 
     .nav-mobile {
@@ -88,6 +92,26 @@ button {
     .nav-item {
         font-size: 1vw;
         margin-right: 5rem;
+    }
+
+    .dropdown {
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.922);
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 8px 16px 0px var(--box-shadow);
+        z-index: 1;
+    }
+    
+    .dropdown button {
+        width: 30%;
+        margin-top: 5rem;
+        animation-duration: 0.6s;
+        animation-name: slidein;
     }
 
     .ab-img img {
@@ -171,6 +195,17 @@ button {
         margin: auto;
         background-color: var(--font-color);
     }
+
+    /* Keyframes */
+    @keyframes slidein {
+        from {
+            margin-top: 10rem;
+        }
+
+        to {
+            margin-top: 5rem;
+        }
+    }
 }
 
 /* nav */
@@ -190,21 +225,6 @@ button {
 
 .nav-item:last-child {
     margin-right: 0rem;
-}
-
-.dropdown {
-    width: 6.5%;
-    padding: 10px;
-    display: none;
-    position: absolute;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px var(--box-shadow);
-    z-index: 1;
-}
-
-.dropdown button{
-    width: 100%;
-    margin-top: 0.5rem;
 }
 
 /* welcome */
@@ -340,6 +360,6 @@ button {
     grid-area: contact;
 }
 
-.visible {
-    display: block;
+.flex {
+    display: flex;
 }
