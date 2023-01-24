@@ -1,7 +1,8 @@
+@import "cssvar.css";
 @font-face {
     font-family: FilsonProRegular;
     src: url(../fonts/FilsonProRegular.otf);
- }
+}
 
 * {
     margin: 0;
@@ -9,35 +10,6 @@
     box-sizing: border-box;
     font-family: FilsonProRegular;
 }
-
-:root, [data-theme="burgundy"] {
-    --black-shadow: #000;
-    --burgundy: #2B0E10;
-    --font-color: #E5E1E1;
-    --button-style: #CCC2C3;
-    --light-gray-text: #C9C2C3;
-    --mid-gray-text: #948687;
-    --mid-red-border:#452c2e;
-    --button-bg-color: #E5E1E118;
-    --overlay-bg-color: #94868798;
-    --text-shadow: #ffffff45;
-    --border: #5F494B;
-}
-
-[data-theme="anime"] {
-    --black-shadow: #000;
-    --burgundy: #2B0E10;
-    --font-color: #E5E1E1;
-    --button-style: #CCC2C3;
-    --light-gray-text: #C9C2C3;
-    --mid-gray-text: #948687;
-    --mid-red-border:#452c2e;
-    --button-bg-color: #E5E1E118;
-    --overlay-bg-color: #94868798;
-    --text-shadow: #ffffff45;
-    --border: #5F494B;
-}
-
 
 ::-webkit-scrollbar {
     width: 0px;
@@ -48,13 +20,10 @@ html {
 }
 
 body {
-    background-color: var(--burgundy);
+    background-color: var(--primary-color);
     width: 100%;
 }
 
-.visible {
-    display: block;
-}
 
 .invisible {
     display: none;
@@ -62,6 +31,16 @@ body {
 
 hr {
     margin-bottom: 30px;
+}
+
+
+button {
+    border: 1px solid var(--button-style);
+    color: var(--button-style);
+    background: var(--button-bg-color);
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 /* Start website */
@@ -213,12 +192,19 @@ hr {
     margin-right: 0rem;
 }
 
-.switch-theme {
-    border: 1px solid var(--button-style);
-    color: var(--button-style);
-    background: var(--button-bg-color);
-    padding: 1rem;
-    border-radius: 15px;
+.dropdown {
+    width: 6.5%;
+    padding: 10px;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px var(--box-shadow);
+    z-index: 1;
+}
+
+.dropdown button{
+    width: 100%;
+    margin-top: 0.5rem;
 }
 
 /* welcome */
@@ -240,7 +226,7 @@ hr {
 
 .welcome p {
     color: var(--mid-gray-text);
-    width: 707px;
+    width: 750px;
     font-size: 20px;
     line-height: 1.5;
     margin: 20px 0px;
@@ -251,11 +237,6 @@ hr {
 }
 
 .student-work {
-    border: 1px solid var(--button-style);
-    color: var(--button-style);
-    background-color: var(--button-bg-color);
-    padding: 1rem;
-    border-radius: 15px;
     margin-top: 10px;
     letter-spacing: 2px;
 }
@@ -357,4 +338,8 @@ hr {
 
 .contact {
     grid-area: contact;
+}
+
+.visible {
+    display: block;
 }
