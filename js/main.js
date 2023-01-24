@@ -10,6 +10,7 @@ const body = document.querySelector('body');
 const themes = document.querySelectorAll('.theme-button');
 const toggleTheme = document.querySelector('.switch-theme');
 const dropdown = document.querySelector('.dropdown');
+const currentTheme = localStorage.getItem('theme');
 
 let navState = "closed";
 
@@ -24,12 +25,18 @@ for (const navItem of navItems) {
     })
 }
 
-themes.forEach((theme) => {
-    theme.addEventListener('click', (event) => {
-        const themeName = event.target.value;
-        document.body.setAttribute('data-theme', themeName);
-    });
+themes.forEach(theme => {
+    theme.addEventListener('click', () => changeTheme(theme.dataset.theme));
 });
+
+function changeTheme(theme) {
+    localStorage.setItem('theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+}
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+}
 
 function startLoader() {
     const loadWebsite = setTimeout(startWebsite, 3000);
