@@ -1,0 +1,60 @@
+:root,
+[data-theme="burgundy"] {
+    --black-shadow: #000;
+    --primary-color: #2B0E10;
+    --font-color: #E5E1E1;
+    --button-style: #CCC2C3;
+    --light-gray-text: #C9C2C3;
+    --mid-gray-text: #948687;
+    --mid-red-border: #452c2e;
+    --button-bg-color: #E5E1E118;
+    --overlay-bg-color: #94868798;
+    --text-shadow: #ffffff45;
+    --border: #5F494B;
+    --box-shadow: #a19c9c33;
+}
+
+[data-theme="dark"] {
+    --black-shadow: #000;
+    --primary-color: #1F1F1F;
+    --font-color: #F8F8F8;
+    --button-style: #F8F8F8;
+    --light-gray-text: #5C5CFF;
+    --mid-gray-text: #7F7FFF;
+    --mid-red-border: #5E2CA5;
+    --button-bg-color: #4F4F4F18;
+    --overlay-bg-color: #94868798;
+    --text-shadow: #ffffff45;
+    --border: #5C5CFF;
+    --box-shadow: #a19c9c33;
+}
+
+[data-theme="candyland"] {
+    --black-shadow: #000;
+    --primary-color: #f8ccef;
+    --font-color: #5E2CA5;
+    --button-style: #873ded;
+    --light-gray-text: #37baee;
+    --mid-gray-text: #74d0f4;
+    --mid-red-border: #5E2CA5;
+    --button-bg-color: #E5E1E118;
+    --overlay-bg-color: #94868798;
+    --text-shadow: #ffffff45;
+    --border: #87CEEB;
+    --box-shadow: #00000033;
+}
+
+[data-theme="pokemon"] {
+    --black-shadow: #000;
+    --primary-color: #F8D030;
+    --font-color: #000000;
+    --button-style: #F85888 ;
+    --light-gray-text: #6890F0;
+    --mid-gray-text: #4a6fc6;
+    --mid-red-border: #F8D030;
+    --button-bg-color: #F8588818;
+    --overlay-bg-color: #94868798;
+    --text-shadow: #ffffff45;
+    --border: #6890F0;
+    --box-shadow: #a19c9c33;
+}
