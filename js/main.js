@@ -10,6 +10,7 @@ const body = document.querySelector('body');
 const themes = document.querySelectorAll('.theme-button');
 const toggleTheme = document.querySelector('.switch-theme');
 const dropdown = document.querySelector('.dropdown');
+const quoteBlock = document.querySelector('.quote');
 const currentTheme = localStorage.getItem('theme');
 
 let navState = "closed";
@@ -69,4 +70,18 @@ function changeTheme(theme) {
 function showThemes() {
     dropdown.classList.toggle("flex");
     body.classList.toggle('border');
+}
+
+fetch('https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand')
+    .then(myData => myData.json())
+    .then(textData => alterData(textData));
+
+function alterData(data) {
+    const quoteDiv = document.createElement('div');
+    for (let i = 0; i < data.length; i++) {
+        const element = data[i];
+        console.log(data[i].content.rendered);
+        quoteDiv.innerHTML = `${data[i].content.rendered}`;
+    }
+    quoteBlock.append(quoteDiv);
 }

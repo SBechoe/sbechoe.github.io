@@ -62,7 +62,9 @@ button {
             ". . . . . . . . . . . ."
             ". . stwork stwork stwork stwork . . . . . ."
             ". . pthong pthong . abakdalieh abakdalieh . asantokhi asantokhi . ."
-            ". . . . . . . . . . . .";
+            ". . . . . . . . . . . ."
+            ". . quote-section quote-section quote-section quote-section . . . . . ."
+            ". . quote quote quote quote quote quote quote quote . .";
     }
 
     .border {
@@ -319,6 +321,11 @@ button {
     opacity: 1;
 }
 
+.quote p{
+    margin-top: 10px;
+    color: var(--font-color);
+}
+
 /* grid-areas */
 .header {
     grid-area: hd;
@@ -354,6 +361,14 @@ button {
 
 .asantokhi {
     grid-area: asantokhi;
+}
+
+.quote-section{
+    grid-area: quote-section;
+}
+
+.quote{
+    grid-area: quote;
 }
 
 .contact {

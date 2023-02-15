@@ -21,7 +21,9 @@
             "pthong"
             "abakdalieh"
             "asantokhi"
-            ".";
+            "."
+            "quote-section"
+            "quote";
     }
 
     .header {
@@ -63,6 +65,14 @@
 
     .asantokhi-overlay {
         grid-area: asantokhi;
+    }
+
+    .quote-section{
+        grid-area: quote-section;
+    }
+    
+    .quote{
+        grid-area: quote;
     }
 
     .nav-browser,
@@ -132,7 +142,9 @@
     .about-title,
     .ab-img,
     .ab-txt,
-    .student-section {
+    .student-section,
+    .quote-section,
+    .quote {
         padding-left: 1rem;
         padding-right: 1rem;
     }
