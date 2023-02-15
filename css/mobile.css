@@ -35,6 +35,10 @@
         top: 0;
     }
 
+    .dropdown{
+        display: none;
+    }
+
     .welcome {
         grid-area: welcome;
     }
