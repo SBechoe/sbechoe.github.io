@@ -10,14 +10,19 @@ const body = document.querySelector('body');
 const themes = document.querySelectorAll('.theme-button');
 const toggleTheme = document.querySelector('.switch-theme');
 const dropdown = document.querySelector('.dropdown');
+const quoteDiv = document.createElement('div');
 const quoteBlock = document.querySelector('.quote');
+const nextQuote = document.querySelector('.quote-btn');
 const currentTheme = localStorage.getItem('theme');
 
 let navState = "closed";
+let quoteData = [];
+let quoteIndex = 0;
 
 nameTitle.addEventListener('click', startLoader);
 burger.addEventListener('click', toggleNav);
 toggleTheme.addEventListener('click', showThemes);
+nextQuote.addEventListener('click', getQuotes);
 
 for (const navItem of navItems) {
     navItem.addEventListener('click', function (event) {
@@ -47,17 +52,6 @@ function startWebsite() {
 }
 
 function toggleNav() {
-    // if (navState == "closed") {
-    //     nav.classList.remove('invisible');
-    //     mobileNav.classList.add('bg-color');
-    //     navState = "open";
-    // }
-    // else if (navState == "open") {
-    //     mobileNav.classList.remove('bg-color');
-    //     nav.classList.remove('visible');
-    //     nav.classList.add('invisible');
-    //     navState = "closed";
-    // }
     nav.classList.toggle('invisible');
     mobileNav.classList.toggle('bg-color');
 }
@@ -72,16 +66,32 @@ function showThemes() {
     body.classList.toggle('border');
 }
 
-fetch('https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand')
-    .then(myData => myData.json())
-    .then(textData => alterData(textData));
+let url = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand";
+url = "https://api.kanye.rest/";
 
-function alterData(data) {
-    const quoteDiv = document.createElement('div');
-    for (let i = 0; i < data.length; i++) {
-        const element = data[i];
-        console.log(data[i].content.rendered);
-        quoteDiv.innerHTML = `${data[i].content.rendered}`;
-    }
+function getQuotes() {
+    fetch(url)
+        .then(myData => myData.json())
+        .then(textData => showData(textData));
+}
+
+function showData(data) {
+    console.log(data);
+    quoteDiv.innerHTML = `${data.quote}`;
+    // quoteData = data;
+    // quoteIndex = 0;
+    // nextQuoteFnc();
+
     quoteBlock.append(quoteDiv);
 }
+
+// function nextQuoteFnc() {
+//     quoteDiv.innerHTML = `${quoteData[quoteIndex].content.rendered}`;
+//     quoteIndex++;
+//     if (quoteIndex >= quoteData.length) {
+//         getQuotes();
+//     }
+// }
+
+getQuotes();
+
