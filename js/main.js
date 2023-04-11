@@ -67,7 +67,7 @@ function showThemes() {
 }
 
 let url = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand";
-url = "https://api.kanye.rest/";
+// url = "https://api.kanye.rest/";
 
 function getQuotes() {
     fetch(url)
@@ -78,20 +78,21 @@ function getQuotes() {
 function showData(data) {
     console.log(data);
     quoteDiv.innerHTML = `${data.quote}`;
-    // quoteData = data;
-    // quoteIndex = 0;
-    // nextQuoteFnc();
+    quoteData = data;
+    quoteIndex = 0;
+    nextQuoteFnc();
 
     quoteBlock.append(quoteDiv);
 }
 
-// function nextQuoteFnc() {
-//     quoteDiv.innerHTML = `${quoteData[quoteIndex].content.rendered}`;
-//     quoteIndex++;
-//     if (quoteIndex >= quoteData.length) {
-//         getQuotes();
-//     }
-// }
+function nextQuoteFnc() {
+    quoteDiv.innerHTML = `${quoteData[quoteIndex].content.rendered}`;
+    quoteIndex++;
+    if (quoteIndex >= quoteData.length) {
+        getQuotes();
+    }
+}
 
 getQuotes();
+
 
