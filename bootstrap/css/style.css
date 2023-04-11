@@ -1,13 +1,66 @@
 @import "/css/cssvar.css";
 
+@font-face {
+    font-family: FilsonProRegular;
+    src: url(/fonts/FilsonProRegular.otf);
+}
+
 ::-webkit-scrollbar {
     width: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: FilsonProRegular;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     background-color: var(--primary-color);
+}
+
+.body-border{
+    border: 7px solid;
+    border-image: linear-gradient(180deg, var(--mid-gray-text) 0%, var(--border) 35%, var(--mid-red-border) 100%)1;
+}
+
+.logo {
+    width: 60px;
+}
+
+.text-light {
+    color: var(--font-color) !important;
+}
+
+.text-gray {
+    color: var(--light-gray-text);
+}
+
+img {
+    width: 100%;
+}
+
+.padding {
+    padding: 1%;
+}
+
+.text-mid-gray{
+    color: var(--mid-gray-text);
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.text-emphasis{
+    color: var(--font-color);
+}
+
+hr {
+    margin-top: 0;
+    /* border: 2px solid; */
 }
