@@ -1,125 +1,33 @@
-const portfolioBlock = document.querySelector('.class');
-let cardCounter = 0;
+const portfolioBlockH = document.querySelector('.t1h');
+const portfolioBlockJ = document.querySelector('.t1j');
+const portfolioBlockK = document.querySelector('.t1k');
+
 const cardsPerRow = 4;
 
-const studentsT1H = [
-    {
-        name: "Koen Aakster",
-        profilePic: "",
-        gitHubUsername: "Oranos-Dragon",
-        gitHubLink: "https://Oranos-Dragon.github.io"
-    },
-    {
-        name: "Jens Heijer",
-        profilePic: "",
-        gitHubUsername: "jensdh",
-        gitHubLink: "https://jensdh.github.io"
-    },
-    {
-        name: "Phoebe Groeneweg",
-        profilePic: "",
-        gitHubUsername: "phoebemeow",
-        gitHubLink: "https://phoebemeow.github.io"
-    },
-    {
-        name: "Harmanpreet Kaur",
-        profilePic: "",
-        gitHubUsername: "Harmanpreet21",
-        gitHubLink: "https://Harmanpreet21.github.io"
-    },
-    {
-        name: "Rafael Nunes Coelho",
-        profilePic: "",
-        gitHubUsername: "rafaelnun3s",
-        gitHubLink: "https://rafaelnun3s.github.io"
-    },
-    {
-        name: "Pawanpreet Singh",
-        profilePic: "",
-        gitHubUsername: "",
-        gitHubLink: "https://"
-    },
-    {
-        name: "Martijn Barel",
-        profilePic: "",
-        gitHubUsername: "mabarel",
-        gitHubLink: "https://mabarel.github.io"
-    },
-    {
-        name: "Olaf Krypczyk",
-        profilePic: "",
-        gitHubUsername: "jrasb",
-        gitHubLink: "https://jrasb.github.io"
-    },
-    {
-        name: "Kuray Baş",
-        profilePic: "",
-        gitHubUsername: "",
-        gitHubLink: "https://"
-    },
-    {
-        name: "Alexi Delidis",
-        profilePic: "",
-        gitHubUsername: "",
-        gitHubLink: "https://"
-    },
-    {
-        name: "Kevin Aarts",
-        profilePic: "",
-        gitHubUsername: "kevin-aarts",
-        gitHubLink: "https://kevin-aarts.github.io"
-    },
-    {
-        name: "Marnix Verstappen",
-        profilePic: "",
-        gitHubUsername: "MarnixVerstappen",
-        gitHubLink: "https://MarnixVerstappen.github.io"
-    },
-    {
-        name: "Nasim Saaïdi",
-        profilePic: "",
-        gitHubUsername: "nasim-saaidi",
-        gitHubLink: "https://nasim-saaidi.github.io"
-    },
-    {
-        name: "Tony Özbey",
-        profilePic: "",
-        gitHubUsername: "t-ozbey",
-        gitHubLink: "https://t-ozbey.github.io"
-    },
-    {
-        name: "Arjun Santokhi",
-        profilePic: "",
-        gitHubUsername: "",
-        gitHubLink: ""
-    },
-    {
-        name: "Mamadou Bah",
-        profilePic: "",
-        gitHubUsername: "",
-        gitHubLink: ""
-    },
-    {
-        name: "Dean Cheung Yue Loi",
-        profilePic: "",
-        gitHubUsername: "d-cyl",
-        gitHubLink: "https://d-cyl.github.io"
-    },
-    {
-        name: "Ilias Bousair",
-        profilePic: "",
-        gitHubUsername: "IliasBousair",
-        gitHubLink: "https://IliasBousair.github.io"
-    }
-];
+function getUrls() {
+    fetch("js/t1h.json")
+        .then(myData => myData.json())
+        .then(jsonData => createCards(jsonData, portfolioBlockH));
 
-console.log(studentsT1H);
+    fetch("js/t1j.json")
+        .then(myData => myData.json())
+        .then(jsonData => createCards(jsonData, portfolioBlockJ));
 
-function createCards() {
+    fetch("js/t1k.json")
+        .then(myData => myData.json())
+        .then(jsonData => createCards(jsonData, portfolioBlockK));
+}
+
+function createCards(students, block) {
     let row = createRow('mt-3');
+    let cardCounter = 0;
 
-    for (let i = 0; i < studentsT1H.length; i++) {
-        const student = studentsT1H[i];
+    console.log(students);
+    console.log(block);
+
+
+    for (let i = 0; i < students.length; i++) {
+        const student = students[i];
         const card = createCard(student.name, student.gitHubUsername, student.gitHubLink);
 
         let col2 = createColumn(2);
@@ -136,7 +44,7 @@ function createCards() {
         cardCounter++;
         if (cardCounter == cardsPerRow) {
             row.append(col2);
-            portfolioBlock.appendChild(row);
+            block.appendChild(row);
             cardCounter = 0;
             row = createRow('mt-3');
         }
@@ -144,13 +52,14 @@ function createCards() {
 
     if (cardCounter < cardsPerRow) {
         while (cardCounter < cardsPerRow) {
-            let col2 = createColumn(2); 
+            let col2 = createColumn(2);
             row.append(col2);
             cardCounter++;
         }
-        portfolioBlock.appendChild(row);
+        block.appendChild(row);
     }
 }
+
 //creates a row with and extra class
 function createRow(rowClass) {
     const row = document.createElement('div');
@@ -187,6 +96,7 @@ function createCard(cardHeader, cardTitle, cardButton) {
     const cardButtonElement = document.createElement('a');
     cardButtonElement.classList.add('btn', 'stretched-link', 'btn-outline-danger');
     cardButtonElement.href = cardButton;
+    cardButtonElement.target = "_blank";
     cardButtonElement.textContent = "Go to GitHub.io page!";
 
     cardBodyElement.append(cardTitleElement);
@@ -198,5 +108,4 @@ function createCard(cardHeader, cardTitle, cardButton) {
     return cardElement;
 }
 
-
-createCards();
+getUrls();
