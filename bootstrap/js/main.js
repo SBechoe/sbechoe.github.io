@@ -89,7 +89,7 @@ function createCard(cardHeader, cardTitle, cardButton) {
     const cardBodyElement = document.createElement('div');
     cardBodyElement.classList.add('card-body');
 
-    const cardTitleElement = document.createElement('h4');
+    const cardTitleElement = document.createElement('h5');
     cardTitleElement.classList.add('card-title');
     cardTitleElement.textContent = cardTitle;
 
