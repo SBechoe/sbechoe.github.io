@@ -2,7 +2,25 @@ const portfolioBlockH = document.querySelector('.t1h');
 const portfolioBlockJ = document.querySelector('.t1j');
 const portfolioBlockK = document.querySelector('.t1k');
 
-const cardsPerRow = 4;
+const cardsPerRow = 5;
+
+document.onkeydown = (e) => {
+    if (e.key == 123) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.key == 'U') {
+        e.preventDefault();
+    }
+};
 
 function getUrls() {
     fetch("js/t1h.json")
@@ -28,9 +46,9 @@ function createCards(students, block) {
 
     for (let i = 0; i < students.length; i++) {
         const student = students[i];
-        const card = createCard(student.name, student.gitHubUsername, student.gitHubLink);
+        const card = createCard(student.name, student.gitHubUsername, student.gitHubLink, student.gitHubUsername);
 
-        let col2 = createColumn(2);
+        let col2 = createColumn(1);
         const colData = createColumn(2);
 
         colData.append(card);
@@ -52,7 +70,7 @@ function createCards(students, block) {
 
     if (cardCounter < cardsPerRow) {
         while (cardCounter < cardsPerRow) {
-            let col2 = createColumn(2);
+            let col2 = createColumn(1);
             row.append(col2);
             cardCounter++;
         }
@@ -74,7 +92,7 @@ function createColumn(size) {
     return col;
 }
 
-function createCard(cardHeader, cardTitle, cardButton) {
+function createCard(cardHeader, cardTitle, cardButton, cardButton2) {
     const cardElement = document.createElement('div');
     cardElement.classList.add('card', 'h-100', 'mb-3');
 
@@ -94,13 +112,20 @@ function createCard(cardHeader, cardTitle, cardButton) {
     cardTitleElement.textContent = cardTitle;
 
     const cardButtonElement = document.createElement('a');
-    cardButtonElement.classList.add('btn', 'stretched-link', 'btn-outline-danger');
+    cardButtonElement.classList.add('btn', "mb-2", 'btn-outline-danger');
     cardButtonElement.href = cardButton;
     cardButtonElement.target = "_blank";
     cardButtonElement.textContent = "Go to GitHub.io page!";
 
+    const cardButtonElement2 = document.createElement('a');
+    cardButtonElement2.classList.add('btn','btn-outline-info');
+    cardButtonElement2.href = `https://github.com/${cardButton2}/${cardButton2}.github.io`;
+    cardButtonElement2.target = "_blank";
+    cardButtonElement2.textContent = "Go to GitHub page!";
+
     cardBodyElement.append(cardTitleElement);
     cardBodyElement.append(cardButtonElement);
+    cardBodyElement.append(cardButtonElement2);
 
     cardElement.append(cardHeaderElement);
     cardElement.append(cardBodyElement);
