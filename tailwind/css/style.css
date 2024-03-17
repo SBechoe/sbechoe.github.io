@@ -1,0 +1,35 @@
+@import "/css/cssvar.css";
+@font-face {
+    font-family: FilsonProRegular;
+    src: url(/fonts/FilsonProRegular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: FilsonProRegular;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+/* border for the whole body */
+.body-border {
+    border: 7px solid;
+    border-image: linear-gradient(180deg, var(--mid-gray-text) 0%, var(--border) 35%, var(--mid-red-border) 100%)1;
+}
+
+header .logo {
+    width: 60px;
+}

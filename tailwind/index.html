@@ -1,13 +1,128 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/Hexagon.png">
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <link rel="stylesheet" href="https://use.typekit.net/dlw6ltk.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f4cc39589e.js" crossorigin="anonymous" defer></script>
+    <!-- <script src="js/main.js" defer></script> -->
+    <title>Sapna Bechoe - Tailwind Edition</title>
 </head>
-<body>
-  <h1 class="">
-    Hello world!
-  </h1>
+
+<body class="body-border">
+    <header class="p-8">
+        <nav class="flex-wrap grid grid-cols-2">
+            <a><img class="logo" src="/img/Hexagon.png" alt=""></a>
+            <ul class="flex justify-evenly">
+                <li class="text-white"><a href="#about">.About Me</a></li>
+                <li class="text-white"><a href="#student-work">.Work Of Students</a></li>
+                <li class="text-white"><a href="/index.html">.HTML-CSS Edition</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="w-8/12 mx-auto">
+        <section class="mt-5 pt-5">
+            <h6 class="text-gray-200 text-1xl">Hi, welcome to my portfolio!</h6>
+            <h6 class="text-gray-200 text-1xl mb-5">My name is</h6>
+            <h1 class="text-gray-300 text-7xl mb-5">Sapna Bechoe.</h1>
+            <h3 class="text-gray-400 text-4xl mb-5">I teach Software Development.</h3>
+            <p class="text-gray-400 text-xl w-9/12 mb-8">
+                I'm a teacher in Software Development, I teach students how to build websites from scratch.
+                Currently we are working towards developing an online portfolio with all the work that they
+                have done during their study, with all the techniques that they have learned through the
+                years at <em class="italic text-gray-200">ROC Mondriaan.</em>
+            </p>
+            <a href="#work-of-students"
+                class="border-2 border-gray-300 w-72 p-2 rounded text-gray-200 hover:bg-gray-300 hover:text-gray-950">Check
+                out the work of my students</a>
+        </section>
+        <section class="mt-28 pt-10 grid grid-cols-2">
+            <div class="ab-me pe-3">
+                <h2 class="text-gray-300 text-3xl mb-1">.About Me</h2>
+                <hr class="h-px bg-slate-300 border-0 mb-4">
+                <p class="text-gray-200 text-sm mb-5">
+                    Hi there! My name is Sapna Bechoe, from 2012 untill 2016 I was a student at ROC Mondriaan, Software
+                    Developer. Here I learned how to make websites from scratch.
+                </p>
+                <p class="text-gray-200 text-sm mb-5">
+                    Fast forward, I started this job in 2016, a month after I graduated. Since then I enjoy teaching
+                    students how to make websites from scratch.
+                </p>
+                <em class="text-gray-200 text-sm">Skills I have developed and I am still working on:</em>
+                <div class="progress mt-3 pe-3">
+                    <div class="skill mb-3">
+                        <h2 class="text-gray-200">HTML</h2>
+                        <div class="w-full bg-gray-400 rounded-full h-2.5">
+                            <div class="bg-orange-700 h-2.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-3">
+                        <h2 class="text-gray-200">CSS</h2>
+                        <div class="w-full bg-gray-400 rounded-full h-2.5">
+                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-3">
+                        <h2 class="text-gray-200">Bootstrap</h2>
+                        <div class="w-full bg-gray-400 rounded-full h-2.5">
+                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-3">
+                        <h2 class="text-gray-200">Tailwind</h2>
+                        <div class="w-full bg-gray-400 rounded-full h-2.5">
+                            <div class="bg-sky-600 h-2.5 rounded-full" style="width: 10%"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-3">
+                        <h2 class="text-gray-200">JavaScript</h2>
+                        <div class="w-full bg-gray-400 rounded-full h-2.5">
+                            <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-3">
+                        <h2 class="text-gray-200">Vue.js</h2>
+                        <div class="w-full bg-gray-400 rounded-full h-2.5">
+                            <div class="bg-pink-400-600 h-2.5 rounded-full" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-3">
+                        <h2 class="text-gray-200">PHP</h2>
+                        <div class="w-full bg-gray-400 rounded-full h-2.5">
+                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-3">
+                        <h2 class="text-gray-200">Symfony</h2>
+                        <div class="w-full bg-gray-400 rounded-full h-2.5">
+                            <div class="bg-gray-600 h-2.5 rounded-full" style="width: 15%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill mb-3">
+                        <h2 class="text-gray-200">Laravel</h2>
+                        <div class="w-full bg-gray-400 rounded-full h-2.5">
+                            <div class="bg-red-600 h-2.5 rounded-full" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h2 class="text-gray-200">Managing students :)</h2>
+                        <div class="w-full bg-gray-400 rounded-full h-2.5">
+                            <div class="bg-green-600 h-2.5 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ab-img mt-10 w-90">
+                <img src="/img/profilepic.png" alt="pic of me">
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
