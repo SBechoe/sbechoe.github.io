@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: FilsonProRegular;
-    src: url(../fonts/FilsonProRegular.otf);
+    src: url(/assets/fonts/FilsonProRegular.otf);
 }
 
 * {
@@ -285,7 +285,7 @@ button {
 }
 
 .ab-txt {
-    list-style-image: url('../img/hexagon.svg');
+    list-style-image: url('/assets/img/hexagon.svg');
     list-style-position: inside;
 }
 

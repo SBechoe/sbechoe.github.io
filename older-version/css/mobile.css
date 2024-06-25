@@ -1,7 +1,7 @@
 @import "cssvar.css";
 @font-face {
     font-family: FilsonProRegular;
-    src: url(../fonts/FilsonProRegular.otf);
+    src: url(/assets/fonts/FilsonProRegular.otf);
 }
 
 
