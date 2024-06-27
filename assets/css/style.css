@@ -23,3 +23,13 @@ html {
     border: 7px solid;
     border-image: linear-gradient(180deg, var(--mid-gray-text) 0%, var(--border) 35%, var(--mid-red-border) 100%)1;
 }
+
+.progress-bar {
+    width: 0;
+}
+
+main{
+    background-image: url("/assets/img/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
