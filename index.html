@@ -36,9 +36,27 @@
                     <li>
                         <a class="hover:text-red-900" href="#work-of-students">Work of Students</a>
                     </li>
-                    <!-- <li>
-                        <a class="hover:text-red-900" href="#other-version">Other versions</a> ##########TODO dropdown with other versions##########
-                    </li> -->
+                    <li class="relative inline-block text-left">
+                        <div>
+                            <button type="button"
+                                class="inline-flex w-full other-version-btn justify-center gap-x-1.5 rounded-md px-3 py-2 hover:text-red-900"
+                                id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                Other versions
+                                <i class="fa-solid fa-angle-down -mr-1 mt-1 h-5 w-5 text-gray-400"></i>
+                            </button>
+                        </div>
+                        <div class="absolute hidden version-list right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                            role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                            <div class="py-1" role="none">
+                                <a href="older-version/index.html" class="block px-4 py-2 text-sm  hover:text-red-900 hover:bg-gray-100"
+                                    role="menuitem" tabindex="1" id="menu-item-0">v1 - HTML/CSS only</a>
+                                <a href="bootstrap/index.html" class="block px-4 py-2 text-sm  hover:text-red-900 hover:bg-gray-100"
+                                    role="menuitem" tabindex="2" id="menu-item-1">v2 - Bootstrap 5.3</a>
+                                <a href="tailwind/index.html" class="block px-4 py-2 text-sm  hover:text-red-900 hover:bg-gray-100"
+                                    role="menuitem" tabindex="3" id="menu-item-2">v3 - Tailwind</a>
+                            </div>
+                        </div>
+                    </li>
                     <li>
                         <a class="hover:text-red-900" href="#contact">Contact</a>
                     </li>
