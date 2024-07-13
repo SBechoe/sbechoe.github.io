@@ -4,9 +4,7 @@ const progressBar = document.querySelector(".progress-bar");
 const otherVersionBtn = document.querySelector('.other-version-btn');
 const verionList = document.querySelector('.version-list');
 const fameBlock = document.querySelector('.hall-of-fame');
-// const portfolioBlockH = document.querySelector('.t1h');
-// const portfolioBlockJ = document.querySelector('.t1j');
-// const portfolioBlockK = document.querySelector('.t1k');
+const cohortBlock = document.querySelector('.work-of-students');
 const totalHeight = document.body.scrollHeight - window.innerHeight;
 
 navMenu.addEventListener('click', onToggleMenu);
@@ -33,38 +31,56 @@ window.onscroll = function () {
 function getUrls() {
     fetch("js/fame.json")
         .then(myData => myData.json())
-        .then(jsonData => createCards(jsonData));
-  
-    // fetch("js/t1h.json")
-    //     .then(myData => myData.json())
-    //     .then(jsonData => createCards(jsonData, portfolioBlockH));
+        .then(jsonData => createCards(jsonData, fameBlock));
 
-    // fetch("js/t1j.json")
-    //     .then(myData => myData.json())
-    //     .then(jsonData => createCards(jsonData, portfolioBlockJ));
-
-    // fetch("js/t1k.json")
-    //     .then(myData => myData.json())
-    //     .then(jsonData => createCards(jsonData, portfolioBlockK));
+    fetch("js/2022.json")
+        .then(myData => myData.json())
+        .then(jsonData => createCards(jsonData, cohortBlock));
 }
 
-function createCards(students) {
+function createCards(students, block) {
 
     for (let i = 0; i < students.length; i++) {
         const student = students[i];
-        const card = createCard(student.name, student.cohort, student.username);
-
-        fameBlock.append(card);
-
+        if (block == fameBlock) {
+            const card = createFameCard(student.name, student.cohort, student.username);
+            block.append(card);
+        } else if(block == cohortBlock) {
+            const card = createCohortCard(student.name, student.cohort, student.username);
+            block.append(card);
+        }
     }
 }
 
-function createCard(title, cohort, username) {
+function createFameCard(title, cohort, username) {
     const cardBox = document.createElement('div');
     cardBox.classList.add(`bg-[url('assets/img/${username}.png')]`, 'bg-cover', 'rounded-sm', 'h-52', 'transition', 'ease-in-out', 'delay-150', 'hover:-translate-y-1', 'hover:scale-110', 'text-2xl', 'duration-300');
-    
+
     const cardUrlElement = document.createElement('a');
     cardUrlElement.classList.add('h-full', 'w-full', 'flex', 'justify-center', 'items-center', 'flex-col', 'transition', 'ease-in-out', 'duration-500', 'text-black', 'bg-white/70', 'hover:backdrop-blur-lg');
+    cardUrlElement.href = `https://${username}.github.io/`;
+    cardUrlElement.target = "_blank";
+
+    const cardTitleElement = document.createElement('h2');
+    cardTitleElement.textContent = title;
+
+    const cardCohortElement = document.createElement('em');
+    cardCohortElement.textContent = 'Cohort ' + cohort;
+
+    cardUrlElement.append(cardTitleElement);
+    cardUrlElement.append(cardCohortElement);
+
+    cardBox.append(cardUrlElement);
+
+    return cardBox;
+}
+
+function createCohortCard(title, cohort, username) {
+    const cardBox = document.createElement('div');
+    cardBox.classList.add('bg-red-700', 'rounded-sm', 'h-52', 'transition', 'ease-in-out', 'delay-150', 'hover:-translate-y-1', 'hover:scale-110', 'text-2xl', 'duration-300');
+
+    const cardUrlElement = document.createElement('a');
+    cardUrlElement.classList.add('h-full', 'w-full', 'flex', 'justify-center', 'items-center', 'flex-col', 'transition', 'ease-in-out', 'duration-500', 'text-black', 'bg-white/70');
     cardUrlElement.href = `https://${username}.github.io/`;
     cardUrlElement.target = "_blank";
 
