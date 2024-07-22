@@ -4,7 +4,8 @@ const progressBar = document.querySelector(".progress-bar");
 const otherVersionBtn = document.querySelector('.other-version-btn');
 const verionList = document.querySelector('.version-list');
 const fameBlock = document.querySelector('.hall-of-fame');
-const cohortBlock = document.querySelector('.work-of-students');
+const cohortBlock22 = document.querySelector('.cohort-22');
+const cohortBlock23 = document.querySelector('.cohort-23');
 const totalHeight = document.body.scrollHeight - window.innerHeight;
 
 navMenu.addEventListener('click', onToggleMenu);
@@ -35,7 +36,11 @@ function getUrls() {
 
     fetch("js/2022.json")
         .then(myData => myData.json())
-        .then(jsonData => createCards(jsonData, cohortBlock));
+        .then(jsonData => createCards(jsonData, cohortBlock22));
+
+    fetch("js/2023.json")
+        .then(myData => myData.json())
+        .then(jsonData => createCards(jsonData, cohortBlock23));
 }
 
 function createCards(students, block) {
@@ -45,7 +50,7 @@ function createCards(students, block) {
         if (block == fameBlock) {
             const card = createFameCard(student.name, student.cohort, student.username);
             block.append(card);
-        } else if(block == cohortBlock) {
+        } else if(block == cohortBlock22 || block == cohortBlock23) {
             const card = createCohortCard(student.name, student.cohort, student.username);
             block.append(card);
         }
