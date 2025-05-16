@@ -12,7 +12,7 @@ const toggleTheme = document.querySelector('.switch-theme');
 const dropdown = document.querySelector('.dropdown');
 const quoteDiv = document.createElement('div');
 const quoteBlock = document.querySelector('.quote');
-const nextQuote = document.querySelector('.quote-btn');
+// const nextQuote = document.querySelector('.quote-btn');
 const currentTheme = localStorage.getItem('theme');
 
 let navState = "closed";
@@ -22,7 +22,7 @@ let quoteIndex = 0;
 nameTitle.addEventListener('click', startLoader);
 burger.addEventListener('click', toggleNav);
 toggleTheme.addEventListener('click', showThemes);
-nextQuote.addEventListener('click', getQuotes);
+// nextQuote.addEventListener('click', getQuotes);
 
 for (const navItem of navItems) {
     navItem.addEventListener('click', function (event) {
